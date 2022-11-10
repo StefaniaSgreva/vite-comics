@@ -11,8 +11,31 @@ body{
 img{
     max-width: 100%;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    text-transform: uppercase;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
 .conainer{
     max-width: 14000px;
     margin: 0 auto;
     padding: 1rem;
+}
+.wrapper{
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }

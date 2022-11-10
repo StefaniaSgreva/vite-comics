@@ -1,6 +1,8 @@
 <template>
     <section class="menu-icons">
-        Icons
+        <div class="wrapper">
+            Icons
+        </div>
     </section>
 </template>
 

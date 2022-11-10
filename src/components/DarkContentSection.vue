@@ -1,6 +1,8 @@
 <template>
     <section class="dark">
-        Content goes here
+        <div class="wrapper">
+            Content goes here
+        </div>
     </section>
 </template>
 

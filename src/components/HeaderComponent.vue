@@ -83,26 +83,16 @@
 
     header{
         background-color: $white;
-        
-            .wrapper{
-                @include dflex;
-                width: 70%;
-                margin: 0 auto;
-                padding: 1rem 0;
-            }
             .header-logo{
                 width: 5rem;
             }
 
             ul{
-                list-style: none;
-                //  margin: 2.5rem 1rem 4rem;
                  @include dflex;
 
                  li a{
                     display: inline-block;
                     padding: 1rem;
-                    text-decoration: none;
                     text-transform: uppercase;
                     font-size: .85rem;
                     font-weight: 600;
@@ -112,7 +102,7 @@
                     &:hover{
                     text-decoration: underline;
                     color: $blue
-                }
+                    }
                  }
 
             }
