@@ -6,9 +6,11 @@
             </a>
             <nav>
                 <ul>
-                    <li v-for="(link,index) in headerLinks" :key="index">
-                        <a :href="link.url" :class="{'active' : link.current}">{{link.text}}</a>
-                    </li>
+                    <div class="border" v-for="(link,index) in headerLinks" :key="index" :class="{'active' : link.current}">
+                        <li>
+                            <a :href="link.url" :class="{'active' : link.current}">{{link.text}}</a>
+                        </li>
+                    </div>
                 </ul>
             </nav>
         </div>
@@ -29,7 +31,7 @@
                     {
                         text: "Comics",
                         url: "#",
-                        current: false,
+                        current: true,
                     },
                     {
                         text: "Movies",
@@ -83,29 +85,41 @@
 
     header{
         background-color: $white;
+
+            .wrapper{
+                padding: 0;
+            }
             .header-logo{
                 width: 5rem;
             }
 
             ul{
-                 @include dflex;
-
-                 li a{
-                    display: inline-block;
-                    padding: 1rem;
-                    text-transform: uppercase;
-                    font-size: .85rem;
-                    font-weight: 600;
-                    color: $black;
+                @include dflex;
+                .border{
+                    border-bottom: 5px solid transparent;
+                    padding: 2rem 0;
 
                     &.active,
                     &:hover{
-                    text-decoration: underline;
-                    color: $blue
+                        border-bottom: 5px solid $blue;
+                        color: $blue;
                     }
-                 }
 
-            }
+                    li a{
+                        display: inline-block;
+                        padding: 1rem;
+                        text-transform: uppercase;
+                        font-size: .85rem;
+                        font-weight: 600;
+                        color: $black;
+
+                        &.active,
+                        &:hover{
+                            color: $blue;
+                        }
+                    }
+                }        
+        }
 
     }
 </style>

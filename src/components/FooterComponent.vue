@@ -31,7 +31,7 @@
         </div>
         <div class="bottom">
             <div class="wrapper">
-                <button>Sign-up Now</button>
+                <button>Sign-up Now!</button>
                 <div class="icon-links">
                     <span>Follow Us</span>
                     <a href="#"><img src="../assets/img/footer-facebook.png" alt="facebook link"></a>
@@ -229,7 +229,7 @@ footer{
         color: $white;
         text-transform: uppercase;
         font-weight: 600;
-
+        cursor: pointer;
     }
     .icon-links{
         display: flex;
