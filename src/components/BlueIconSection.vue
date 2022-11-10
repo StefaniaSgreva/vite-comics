@@ -44,6 +44,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            cursor: pointer;
         }
         img{
             width: 3.2rem;
