@@ -4,24 +4,10 @@
             <div class="wrapper">
                 <nav>
                     <div class="R-nav">
-                        <ul>
-                            <h4>Dc Comics</h4>
-                            <li v-for="(link,index) in dcComics" :key="index"><a :href="link.url">{{link.text}}</a></li>
-                        </ul>
-                        <ul>
-                            <h4>Shop</h4>
-                            <li v-for="(link,index) in shop" :key="index"><a :href="link.url">{{link.text}}</a></li>
-                        </ul>
+                        <FooterMenu v-for="(menu,index) in navBarsR" :key="index" :item="menu"/>
                     </div>
                     <div class="next-nav">
-                        <ul>
-                            <h4>Dc</h4>
-                            <li v-for="(link,index) in dc" :key="index"><a :href="link.url">{{link.text}}</a></li>
-                        </ul>
-                        <ul>
-                            <h4>Sites</h4>
-                            <li v-for="(link,index) in sites" :key="index"><a :href="link.url">{{link.text}}</a></li>
-                        </ul>
+                        <FooterMenu v-for="(menu,index) in navBarsL" :key="index" :item="menu"/>
                     </div>
                 </nav>
                 <div class="dc-logo-footer">
@@ -46,124 +32,24 @@
 </template>
 
 <script>
+    import {footerMenuR} from '../data/dc-comics.js';
+    import {footerMenuL} from '../data/dc-comics.js';
+    import FooterMenu from './FooterMenu.vue';
     export default {
         name: 'FooterComponent',
+        components:{
+            FooterMenu
+        },
         data(){
             return {
-                dcComics: [
-                    {
-                        text: "Characters",
-                        url: "#",
-                    },
-                    {
-                        text: "Comics",
-                        url: "#",
-                    },
-                    {
-                        text: "Movies",
-                        url: "#",
-                    },
-                    {
-                        text: "Tv",
-                        url: "#",
-                    },
-                    {
-                        text: "Games",
-                        url: "#",
-                    },
-                    {
-                        text: "Videos",
-                        url: "#",
-                    },
-                    {
-                        text: "News",
-                        url: "#",
-                    }
-                ],
-                shop: [
-                    {
-                        text: "Shop DC",
-                        url: "#",
-                    },
-                    {
-                        text: "Shop Dc Collectibles",
-                        url: "#",
-                    }
-                ],
-                dc: [
-                    {
-                        text: "Terms Of Use",
-                        url: "#",
-                    },
-                    {
-                        text: "Privacy policy (New)",
-                        url: "#",
-                    },
-                    {
-                        text: "Ad Choices",
-                        url: "#",
-                    },
-                    {
-                        text: "Advertising",
-                        url: "#",
-                    },
-                    {
-                        text: "Jobs",
-                        url: "#",
-                    },
-                    {
-                        text: "Subscriptions",
-                        url: "#",
-                    },
-                    {
-                        text: "Talent Workshops",
-                        url: "#",
-                    },
-                    {
-                        text: "CPSC Certificates",
-                        url: "#",
-                    },
-                    {
-                        text: "Ratings",
-                        url: "#",
-                    },
-                    {
-                        text: "Shop Help",
-                        url: "#",
-                    },
-                    {
-                        text: "Contact Us",
-                        url: "#",
-                    }
-                ],
-                sites: [
-                    {
-                        text: "DC",
-                        url: "#",
-                    },
-                    {
-                        text: "MAD Magazine",
-                        url: "#",
-                    },
-                    {
-                        text: "DC Kids",
-                        url: "#",
-                    },
-                    {
-                        text: "DC Universe",
-                        url: "#",
-                    },
-                    {
-                        text: "DC Power Visa",
-                        url: "#",
-                    }
-                ]
+                navBarsR: footerMenuR, 
+                navBarsL: footerMenuL,
             }
         }
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use '../assets/styles/partials/mixins' as *;
 @use '../assets/styles/partials/variables' as *;
 
@@ -187,16 +73,22 @@ footer{
 
         .R-nav{
             margin-right: 2rem;
+            margin-top: -1rem;
 
-            ul:nth-child(2){
+            
+
+            ul{
                 margin-top: 1rem;
             }
+           
         }
         .next-nav{
             display: flex;
-            ul{
-                margin-right: 2rem;
+            margin-top: -1rem;
 
+            ul{
+                margin-top: 1rem;
+                margin-right: 2rem;
             }
         }
         li a{
