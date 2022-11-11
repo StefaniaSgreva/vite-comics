@@ -209,6 +209,7 @@ footer{
             }
         }
         h4{
+            font-size: 1.2rem;
             margin-bottom: 1rem;
         }
     }
@@ -227,23 +228,23 @@ footer{
         border: 2px solid $blue;
         padding: .75rem;
         color: $white;
-        text-transform: uppercase;
-        font-weight: 600;
         cursor: pointer;
+        font-size: 1.1rem;
     }
     .icon-links{
         display: flex;
         align-items: center;
 
         img{
-            width: 1.5rem;
-            margin-left: .75rem;
+            width: 2rem;
+            margin-left: 1rem;
         }
             span{
             text-transform: uppercase;
             color: $blue;
+            font-size: 1.2rem;
             font-weight: 600;
-            padding-right: .75rem;
+            margin-right: .75rem;
         }
     }
     
