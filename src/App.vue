@@ -1,7 +1,9 @@
 <template>
   <HeaderComponent/>
-  <DarkContentSection/>
-  <BlueIconSection/>
+  <main>
+    <DarkContentSection/>
+    <BlueIconSection/>
+  </main>
   <FooterComponent/>
 </template>
 
