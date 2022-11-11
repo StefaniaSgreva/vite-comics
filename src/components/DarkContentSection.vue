@@ -55,6 +55,7 @@
                 align-self: flex-start;
                 width: calc(100% / 6);
                 padding: 2rem .75rem;
+                cursor: pointer;
                 
                 .img-container{
                     width: 185px;
